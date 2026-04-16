@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -50,4 +51,8 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+h2 {
+  line-height: normal;
 }

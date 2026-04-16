@@ -1,1 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font: 'Inter-Variable';
+    --accent-font: 'PressStart2P-Regular';
+    --background-svg: url('../svg/background.svg');
+    --section-min-size: 375px;
+    --section-ideal-size: 90%;
+    --section-max-size: 700px;
+    --outline-color: #000;
+    --section-background-color: #fff;
+}
