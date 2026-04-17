@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  padding: 1px 0 103px;
+  padding: var(--page-padding);
   font-variation-settings: 'wght' 400;
 }
 
@@ -33,12 +33,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: var(--container-gap);
 }
 
 .header {
-  margin-block: 100px;
-  gap: 20px;
+  margin-block: var(--header-margin-block);
+  gap: var(--header-gap);
   font-family: var(--accent-font), sans-serif;
   text-align: center;
 }
@@ -64,16 +64,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  outline: var(--outline-color) 2px solid;
-  min-block-size: 368px;
+  outline: var(--outline-color) var(--button-outline-width) solid;
+  min-block-size: var(--section-min-block-size);
   background-color: var(--section-background-color);
 }
 
 .section-heading {
-  padding: 3px 10px;
-  font-size: 18px;
+  padding: var(--section-heading-padding);
+  font-size: var(--section-heading-font-size);
   font-style: normal;
-  line-height: 22px;
+  line-height: var(--section-heading-line-height);
   font-weight: 700;
 }
 
@@ -82,7 +82,7 @@
   display: inline-block;
   line-height: 0;
   overflow: hidden;
-  outline: var(--outline-color) 2px solid;
+  outline: var(--outline-color) var(--button-outline-width) solid;
   aspect-ratio: 1 / 1;
 }
 
@@ -102,31 +102,31 @@
   font-family: var(--accent-font), sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: var(--watermark-font-size);
+  line-height: var(--watermark-line-height);
   mix-blend-mode: hard-light;
   position: absolute;
-  top: 25px;
-  right: 25px;
-  opacity: 0.5;
+  top: var(--watermark-top);
+  right: var(--watermark-right);
+  opacity: var(--watermark-opacity);
   paint-order: stroke fill;
-  color: #000;
-  padding: 5px 10px;
+  color: var(--watermark-color);
+  padding: var(--watermark-padding);
   pointer-events: none;
   user-select: none;
   text-transform: uppercase;
 }
 
 .card-content {
-  padding: 25px;
+  padding: var(--card-content-padding);
 }
 
 .main-text {
-  margin-block-end: 27px;
+  margin-block-end: var(--main-text-margin-end);
 }
 
 .secondary-text {
-  margin-block-end: 25px;
+  margin-block-end: var(--secondary-text-margin-end);
 }
 
 .button-container {
@@ -134,7 +134,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: end;
-  gap: 12px;
+  gap: var(--button-gap);
 }
 
 .button {
@@ -151,16 +151,16 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.5s ease;
-  background-color: #fff;
-  outline: 2px solid #000;
+  transition: box-shadow var(--button-transition);
+  background-color: var(--button-background);
+  outline: var(--button-outline-width) solid var(--button-outline);
   border: none;
 }
 
 .card__like-button:focus-visible,
 .dialog-open-button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0px #000;
+  box-shadow: var(--focus-shadow);
 }
 
 .card__like-button::before,
@@ -171,8 +171,8 @@
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #000;
-  transition: width 0.5s ease-in-out;
+  background-color: var(--button-hover-background);
+  transition: width var(--button-fill-transition);
   z-index: 0;
 }
 
@@ -183,63 +183,63 @@
 
 .button__text {
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: var(--button-font-size);
   position: relative;
   z-index: 1;
 }
 
 /* Специфичные стили для кнопки Like */
 .card__like-button {
-  inline-size: 130px;
-  block-size: 35px;
+  inline-size: var(--card-like-inline-size);
+  block-size: var(--card-like-block-size);
 }
 
 .card__like-button .button__text {
-  color: #fff;
+  color: var(--button-inverted-foreground);
   mix-blend-mode: difference;
 }
 
 .card__like-button .button__icon {
   mix-blend-mode: difference;
-  fill: #fff;
+  fill: var(--button-inverted-foreground);
 }
 
 .dialog-open-button {
-  inline-size: 335px;
-  min-block-size: 55px;
+  inline-size: var(--dialog-open-inline-size);
+  min-block-size: var(--dialog-open-min-block-size);
   margin-inline: auto;
-  gap: 8px;
+  gap: var(--dialog-open-gap);
 }
 
 .dialog-open-button .button__text {
-  color: #000;
+  color: var(--button-foreground);
   mix-blend-mode: normal;
-  transition: color 0.5s ease-in-out;
+  transition: color var(--button-fill-transition);
 }
 
 .dialog-open-button:hover .button__text {
-  color: #fff;
+  color: var(--button-inverted-foreground);
 }
 
 .dialog-open-button .button__icon {
   position: relative;
   z-index: 1;
-  fill: #000;
-  transition: fill 0.5s ease-in-out;
+  fill: var(--button-foreground);
+  transition: fill var(--button-fill-transition);
 }
 
 .dialog-open-button:hover .button__icon {
-  fill: #fff;
+  fill: var(--button-inverted-foreground);
 }
 
 .disk-icon {
-  max-block-size: 21px;
-  max-inline-size: 21px;
+  max-block-size: var(--disk-icon-size);
+  max-inline-size: var(--disk-icon-size);
 }
 
 .dialog-disk-icon {
-  max-block-size: 39px;
-  max-inline-size: 39px;
+  max-block-size: var(--dialog-disk-icon-size);
+  max-inline-size: var(--dialog-disk-icon-size);
 }
 
 /* Диалог */
@@ -249,10 +249,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 30px;
-  border: 2px solid #000;
-  background-color: #fff;
-  max-width: 350px;
+  padding: var(--dialog-padding);
+  border: var(--button-outline-width) solid var(--dialog-border-color);
+  background-color: var(--dialog-background-color);
+  max-width: var(--dialog-max-width);
   width: 90%;
   text-align: center;
   z-index: 1000;
@@ -266,7 +266,7 @@ dialog[open] {
 }
 
 #memory-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--dialog-backdrop-color);
   z-index: 999;
 }
 
@@ -279,13 +279,13 @@ dialog[open] {
 
 .dialog-text {
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: var(--dialog-text-font-size);
   text-align: start;
   text-transform: uppercase;
 }
 
 .dialog-close-button {
-  block-size: 39px;
+  block-size: var(--dialog-close-block-size);
   inline-size: 100%;
   cursor: pointer;
   display: flex;
@@ -293,15 +293,15 @@ dialog[open] {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.5s ease;
-  background-color: #fff;
-  border: 2px solid #000;
+  transition: box-shadow var(--button-transition);
+  background-color: var(--button-background);
+  border: var(--button-outline-width) solid var(--dialog-border-color);
   text-transform: uppercase;
 }
 
 .dialog-close-button:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0px #000;
+  box-shadow: var(--focus-shadow);
 }
 
 .dialog-close-button::before {
@@ -311,8 +311,8 @@ dialog[open] {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #000;
-  transition: width 0.5s ease-in-out;
+  background-color: var(--button-hover-background);
+  transition: width var(--button-fill-transition);
   z-index: 0;
 }
 
@@ -321,15 +321,15 @@ dialog[open] {
 }
 
 .dialog-close-button .button__text {
-  color: #000;
+  color: var(--button-foreground);
   mix-blend-mode: normal;
-  transition: color 0.5s ease-in-out;
+  transition: color var(--button-fill-transition);
   position: relative;
   z-index: 1;
 }
 
 .dialog-close-button:hover .button__text {
-  color: #fff;
+  color: var(--button-inverted-foreground);
 }
 
 /* Фильтры изображений */
@@ -366,8 +366,8 @@ dialog[open] {
 }
 
 .card__icon-button {
-  block-size: 35px;
-  inline-size: 35px;
+  block-size: var(--card-icon-button-size);
+  inline-size: var(--card-icon-button-size);
   padding: 0;
   cursor: pointer;
   border: none;
@@ -376,7 +376,6 @@ dialog[open] {
   align-items: center;
   justify-content: center;
 }
-
 
 .card__icon-button .like-icon {
   display: block;
@@ -391,7 +390,7 @@ dialog[open] {
 }
 
 .card__icon-button:focus-visible {
-  outline: #000 2px solid;
+  outline: var(--button-outline) var(--button-outline-width) solid;
 }
 
 .contour {
@@ -492,14 +491,14 @@ dialog[open] {
 
   .dialog-open-button {
     flex-direction: column;
-    min-block-size: 84px;
+    min-block-size: var(--dialog-open-mobile-min-block-size);
   }
 }
 
-@supports (-webkit-text-stroke: 2px #FFFFFF) or (text-stroke: 2px #FFFFFF) {
+@supports (-webkit-text-stroke: 2px var(--watermark-stroke-color)) or (text-stroke: 2px var(--watermark-stroke-color)) {
   .watermark {
-    -webkit-text-stroke: 2px #FFFFFF;
-    text-stroke: 2px #FFFFFF;
+    -webkit-text-stroke: 2px var(--watermark-stroke-color);
+    text-stroke: 2px var(--watermark-stroke-color);
   }
 }
 

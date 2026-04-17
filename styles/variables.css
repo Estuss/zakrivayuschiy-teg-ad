@@ -3,13 +3,66 @@
     --main-font: 'Inter-Variable';
     --accent-font: 'PressStart2P-Regular';
     --background-svg: url('../svg/background.svg');
+
     --section-min-size: 375px;
     --section-ideal-size: 90%;
     --section-max-size: 700px;
-    --outline-color: #000;
     --section-background-color: #fff;
+    --outline-color: #000;
     --accent-color: #000;
     --main-color: #fff;
+
+    --page-padding: 1px 0 103px;
+    --container-gap: 50px;
+    --header-margin-block: 100px;
+    --header-gap: 20px;
+    --section-min-block-size: 368px;
+    --section-heading-padding: 3px 10px;
+    --section-heading-font-size: 18px;
+    --section-heading-line-height: 22px;
+
+    --watermark-font-size: 14px;
+    --watermark-line-height: 14px;
+    --watermark-top: 25px;
+    --watermark-right: 25px;
+    --watermark-padding: 5px 10px;
+    --watermark-opacity: 0.5;
+    --watermark-color: #000;
+    --watermark-stroke-color: #FFFFFF;
+
+    --card-content-padding: 25px;
+    --main-text-margin-end: 27px;
+    --secondary-text-margin-end: 25px;
+
+    --button-gap: 12px;
+    --button-font-size: 14px;
+    --button-background: #fff;
+    --button-foreground: #000;
+    --button-inverted-foreground: #fff;
+    --button-hover-background: #000;
+    --button-transition: 0.5s ease;
+    --button-fill-transition: 0.5s ease-in-out;
+    --button-outline: #000;
+    --button-outline-width: 2px;
+    --focus-shadow: 2px 2px 0px #000;
+
+    --card-like-inline-size: 130px;
+    --card-like-block-size: 35px;
+    --dialog-open-inline-size: 335px;
+    --dialog-open-min-block-size: 55px;
+    --dialog-open-gap: 8px;
+    --dialog-open-mobile-min-block-size: 84px;
+    --disk-icon-size: 21px;
+    --dialog-disk-icon-size: 39px;
+    --dialog-padding: 30px;
+    --dialog-max-width: 350px;
+    --dialog-close-block-size: 39px;
+    --card-icon-button-size: 35px;
+
+    --dialog-background-color: #fff;
+    --dialog-border-color: #000;
+    --dialog-backdrop-color: rgba(0, 0, 0, 0.7);
+    --dialog-text-font-size: 14px;
 
     --animation-fill-color: #ff0000;
     --core-color: transparent;
