@@ -3,6 +3,7 @@
     --main-font: 'Inter-Variable';
     --accent-font: 'PressStart2P-Regular';
     --background-svg: url('../svg/background.svg');
+    --page-background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 0 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 0 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
     --section-min-size: 375px;
     --section-ideal-size: 90%;

@@ -20,8 +20,9 @@
 
 .background {
   position: absolute;
-  background-image: var(--background-svg);
+  background-image: var(--page-background-image);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   top: 0;
   left: 0;
@@ -72,9 +73,8 @@
 .section-heading {
   padding: var(--section-heading-padding);
   font-size: var(--section-heading-font-size);
-  font-style: normal;
   line-height: var(--section-heading-line-height);
-  font-weight: 700;
+  font-variation-settings: 'wght' 700;
 }
 
 .image-container {
