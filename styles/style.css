@@ -161,6 +161,7 @@
 .dialog-open-button:focus-visible {
   outline: none;
   box-shadow: var(--focus-shadow);
+  border: var(--button-outline-width) solid var(--button-outline);
 }
 
 .card__like-button::before,
