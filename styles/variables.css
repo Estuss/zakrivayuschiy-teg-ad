@@ -8,4 +8,12 @@
     --section-max-size: 700px;
     --outline-color: #000;
     --section-background-color: #fff;
+    --accent-color: #000;
+    --main-color: #fff;
+
+    --animation-fill-color: #ff0000;
+    --core-color: transparent;
+    --main-body-color: transparent;
+    --contour-color: #000;
+    --main-animation-color: #ff0000;
 }
